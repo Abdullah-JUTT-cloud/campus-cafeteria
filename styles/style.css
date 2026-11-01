@@ -10,6 +10,86 @@
   --background: #fdf6ec;
 }
 
+/* ===== FEEDBACK PAGE STYLES (feature/feedback-page) ===== */
+.feedback-intro {
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+}
+
+.contact-details h2 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.contact-details p {
+  margin-bottom: 1rem;
+}
+
+.feedback-form-section {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.feedback-form-section h2 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.feedback-form label {
+  display: block;
+  font-weight: bold;
+  margin: 1rem 0 0.25rem;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  border: 1px solid #e8dcc8;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem;
+  width: 100%;
+}
+
+.feedback-form button {
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+}
+
+.feedback-form button:hover {
+  background: var(--dark);
+}
+
+.form-note {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .contact-details,
+  .feedback-form-section {
+    padding: 1rem;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--dark);
