@@ -17,8 +17,36 @@
     </nav>
   </header>
   <main>
-    <h1>Feedback</h1>
-    <!-- content goes here -->
+    <h1>Feedback &amp; Contact</h1>
+    <p class="feedback-intro">Tell us what you liked, or what we can improve. We read every message.</p>
+
+    <section class="contact-details">
+      <h2>Contact Details</h2>
+      <p><strong>Campus Bites Cafeteria</strong><br>
+      Ground Floor, Student Center<br>
+      Main Campus</p>
+      <p>Phone: (042) 3577-7150<br>
+      Email: campusbites@ucp.edu.pk</p>
+      <p>Opening hours: Monday to Friday 8:00 AM - 8:00 PM,<br>
+      Saturday 9:00 AM - 6:00 PM, Sunday closed.</p>
+    </section>
+
+    <section class="feedback-form-section">
+      <h2>Send Us Your Feedback</h2>
+      <form class="feedback-form" action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="What did you like? What can we improve?" required></textarea>
+
+        <button type="submit">Send Feedback</button>
+      </form>
+      <p class="form-note">This is a demo form for the assignment. Messages are not sent anywhere.</p>
+    </section>
   </main>
   <footer>© 2026 Campus Bites</footer>
 </body>
