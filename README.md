@@ -6,7 +6,7 @@ A small informational website for the fictional university cafeteria "Campus Bit
 | Name | GitHub Username | Role |
 |------|-----------------|------|
 | Abdullah | Abdullah-JUTT-cloud | Team Lead |
-| Name 2 | anasyousaf-dev | Member |
+| Anas Yousuf | anasyousaf-dev | Member |
 
 ## Pages
 - Home (index.html)
