@@ -22,6 +22,83 @@ header {
   padding: 1rem;
 }
 
+/* ===== ORDER PAGE STYLES (feature/order-page) ===== */
+.order-intro {
+  margin-bottom: 2rem;
+}
+
+.order-steps {
+  list-style: none;
+  counter-reset: step;
+}
+
+.order-steps li {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  counter-increment: step;
+  margin-bottom: 1rem;
+  padding: 1.25rem 1.25rem 1.25rem 4rem;
+  position: relative;
+}
+
+.order-steps li::before {
+  background: var(--primary);
+  border-radius: 50%;
+  color: #ffffff;
+  content: counter(step);
+  font-weight: bold;
+  height: 2rem;
+  left: 1rem;
+  line-height: 2rem;
+  position: absolute;
+  text-align: center;
+  top: 1.25rem;
+  width: 2rem;
+}
+
+.order-steps h3 {
+  margin-bottom: 0.25rem;
+}
+
+.guidelines {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 1.25rem;
+}
+
+.guidelines h2 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.guidelines h3 {
+  margin: 1rem 0 0.25rem;
+}
+
+.guidelines ul {
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .order-steps li {
+    padding: 1rem 1rem 1rem 3.5rem;
+  }
+
+  .order-steps li::before {
+    left: 0.75rem;
+    top: 1rem;
+  }
+
+  .guidelines {
+    padding: 1rem;
+  }
+}
+
 .navbar {
   align-items: center;
   display: flex;
