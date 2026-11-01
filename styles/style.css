@@ -10,6 +10,86 @@
   --background: #fdf6ec;
 }
 
+/* ===== FEEDBACK PAGE STYLES (feature/feedback-page) ===== */
+.feedback-intro {
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+}
+
+.contact-details h2 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.contact-details p {
+  margin-bottom: 1rem;
+}
+
+.feedback-form-section {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.feedback-form-section h2 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.feedback-form label {
+  display: block;
+  font-weight: bold;
+  margin: 1rem 0 0.25rem;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  border: 1px solid #e8dcc8;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem;
+  width: 100%;
+}
+
+.feedback-form button {
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+}
+
+.feedback-form button:hover {
+  background: var(--dark);
+}
+
+.form-note {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .contact-details,
+  .feedback-form-section {
+    padding: 1rem;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--dark);
@@ -20,6 +100,83 @@ body {
 header {
   background: var(--dark);
   padding: 1rem;
+}
+
+/* ===== ORDER PAGE STYLES (feature/order-page) ===== */
+.order-intro {
+  margin-bottom: 2rem;
+}
+
+.order-steps {
+  list-style: none;
+  counter-reset: step;
+}
+
+.order-steps li {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  counter-increment: step;
+  margin-bottom: 1rem;
+  padding: 1.25rem 1.25rem 1.25rem 4rem;
+  position: relative;
+}
+
+.order-steps li::before {
+  background: var(--primary);
+  border-radius: 50%;
+  color: #ffffff;
+  content: counter(step);
+  font-weight: bold;
+  height: 2rem;
+  left: 1rem;
+  line-height: 2rem;
+  position: absolute;
+  text-align: center;
+  top: 1.25rem;
+  width: 2rem;
+}
+
+.order-steps h3 {
+  margin-bottom: 0.25rem;
+}
+
+.guidelines {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 1.25rem;
+}
+
+.guidelines h2 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.guidelines h3 {
+  margin: 1rem 0 0.25rem;
+}
+
+.guidelines ul {
+  list-style: disc;
+  margin-left: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .order-steps li {
+    padding: 1rem 1rem 1rem 3.5rem;
+  }
+
+  .order-steps li::before {
+    left: 0.75rem;
+    top: 1rem;
+  }
+
+  .guidelines {
+    padding: 1rem;
+  }
 }
 
 .navbar {
@@ -44,11 +201,148 @@ main {
   padding: 0 1rem;
 }
 
+/* ===== DEALS PAGE STYLES (feature/deals-page) ===== */
+.deals-intro {
+  margin-bottom: 2rem;
+}
+
+.daily-special {
+  background: #ffffff;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.daily-special h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.deal-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.deal-desc {
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.deal-price {
+  color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.deal-old-price {
+  color: #7f8c8d;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.deal-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.deal-card {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.deal-card h3 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.deal-card ul {
+  list-style: disc;
+  margin: 0 0 1rem 1.25rem;
+}
+
+.deal-note {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .deal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-special {
+    padding: 1rem;
+  }
+}
+
 footer {
   background: var(--dark);
   color: #ffffff;
   padding: 1rem;
   text-align: center;
+}
+
+/* ===== MENU PAGE STYLES (feature/menu-page) ===== */
+.menu-intro {
+  margin-bottom: 2rem;
+}
+
+.menu-category {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+}
+
+.menu-category h2 {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu-note {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.menu-items {
+  list-style: none;
+}
+
+.menu-items li {
+  border-bottom: 1px dashed #e8dcc8;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+}
+
+.menu-items li:last-child {
+  border-bottom: none;
+}
+
+.item-price {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .menu-category {
+    padding: 1rem;
+  }
+
+  .menu-items li {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -58,3 +352,75 @@ footer {
   }
 }
 /* ===== PAGE-SPECIFIC STYLES BELOW ===== */
+
+/* ===== HOME PAGE STYLES (feature/home-page) ===== */
+.hero {
+  background: var(--dark);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+}
+
+.btn {
+  background: var(--primary);
+  border-radius: 6px;
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+}
+
+.btn-light {
+  background: #ffffff;
+  color: var(--dark);
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+.info-grid,
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info-box,
+.card {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.card {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.card:hover {
+  border-color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.25rem 1rem;
+  }
+
+  .info-grid,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
