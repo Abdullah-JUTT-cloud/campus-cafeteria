@@ -59,6 +59,78 @@ footer {
 }
 /* ===== PAGE-SPECIFIC STYLES BELOW ===== */
 
+/* ===== HOME PAGE STYLES (feature/home-page) ===== */
+.hero {
+  background: var(--dark);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+}
+
+.btn {
+  background: var(--primary);
+  border-radius: 6px;
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+}
+
+.btn-light {
+  background: #ffffff;
+  color: var(--dark);
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+.info-grid,
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info-box,
+.card {
+  background: #ffffff;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.card {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.card:hover {
+  border-color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.25rem 1rem;
+  }
+
+  .info-grid,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== MENU PAGE STYLES (feature/menu-page) ===== */
 .menu-intro {
   margin-bottom: 2rem;
